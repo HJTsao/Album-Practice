@@ -1,0 +1,191 @@
+body {
+	margin:0;
+}
+
+#header {
+	position: absolute;
+	width:100vw;
+	max-width: 100%;
+	min-width: 900px;
+	height:100px;
+	margin:0;
+	z-index: 4;
+	background-color: rgba(255,255,255,0.9);
+}
+
+#root {
+	position: relative;
+	height:100px;
+	width: 900px;
+	margin:auto;
+}
+
+#header p{
+	color:black;
+	font-size:20px;
+}
+
+#logo {
+	position: absolute;
+	height:50px;
+	width:400px;
+	top:25px;
+	float:left;
+}
+
+#logo h1{
+	position: absolute;
+	font-family:"Droid Serif";
+	color: grey;
+	margin:0;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+.headerLink {
+	position: relative;
+	height:50px;
+	width:90px;
+	top:25px;
+	float:right;
+	font-family:"open sans condensed", sans-serif;
+}
+
+.headerLink a{
+	position:absolute;
+	text-decoration: none;
+	color:black;
+	top:50%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+}
+
+#fblink img {
+	height:5vh;
+}
+
+#album {
+	position: absolute;
+	width:100vw;
+	max-width: 100%;
+	min-width: 900px;
+	height:100vh;
+	max-height: 100%;
+	margin:0;
+	background-color: green;
+	overflow:hidden;
+	z-index: 2;
+}
+
+.photo {
+	position: absolute;
+	width:100vw;
+	max-width: 100%;
+	min-width: 900px;
+	height:100vh;
+	max-height: 100%;
+	display:none;
+	overflow: hidden;
+}
+
+
+
+#album img{
+	position:absolute;
+	top:-9999px;
+	bottom:-9999px;
+	left:-9999px;
+	right:-9999px;
+	margin:auto; 
+}
+
+#cycle-pager {
+	position: absolute;
+	width:100%;
+	min-width: 900px;
+	bottom:120px;
+	text-align: center;
+	z-index: 2;
+	color:#fff;
+}
+
+#cycle-pager span {
+	display:inline-block;
+	width: 11px;
+	height: 11px;
+	font-size:44px;
+	font-family: arial;
+	cursor:pointer;
+	margin-right:5px;
+}
+
+.cycle-pager-active{
+	color:orange;
+}
+
+#about {
+	display:none;
+	position: absolute;
+	width:100vw;
+	max-width: 100%;
+	min-width: 900px;
+	height:100vh;
+	max-height: 100%;
+	margin:0;
+	background-color: white;
+	z-index: 3;
+}
+
+#container {
+	position: absolute;
+	width: 1050px;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+#about-photo{
+	display:inline-block;
+	height: 400px;
+	width:300px;
+	float: left;
+	overflow:hidden;
+}
+
+#about-photo img{
+	height: 400px;
+}
+
+#about-word{
+	display: inline-block;
+	height:500px;
+	width: 700px;
+	margin-left:50px;
+}
+
+#about p{
+	text-align:left;
+	font-size: 22px;
+	font-family: "raleway";
+}
+#sign{
+	width:700px;
+}
+#footer {
+	position: absolute;
+	width: 100vw;
+	max-width: 100%;
+	min-width: 900px;
+	height: 100px;
+	bottom:0px;
+	margin:0;
+	z-index: 4;
+	background-color: rgba(255,255,255,0.9);
+}
+
+#footer p{
+	text-align:center;
+	color:black;
+	font-family:"raleway", sans-serif;
+	font-size: 15px;
+}
+
