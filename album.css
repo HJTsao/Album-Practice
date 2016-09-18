@@ -1,4 +1,12 @@
+html{
+	position: relative;
+	min-height: 630px;
+	height: 100%
+}
 body {
+	min-width:1120px;
+	height:100%;
+	min-height:630px;
 	margin:0;
 }
 
@@ -6,7 +14,7 @@ body {
 	position: absolute;
 	width:100vw;
 	max-width: 100%;
-	min-width: 900px;
+	min-width: 1120px;
 	height:100px;
 	margin:0;
 	z-index: 4;
@@ -16,7 +24,9 @@ body {
 #root {
 	position: relative;
 	height:100px;
-	width: 900px;
+	width: 100vw;
+	min-width: 1120px;
+	max-width: 60%;
 	margin:auto;
 }
 
@@ -61,29 +71,28 @@ body {
 }
 
 #fblink img {
-	height:5vh;
+	height:50px;
 }
 
 #album {
 	position: absolute;
 	width:100vw;
 	max-width: 100%;
-	min-width: 900px;
-	height:100vh;
-	max-height: 100%;
-	margin:0;
+	min-width: 1120px;
+	height: 100vh;
+	min-height: 630px;
 	background-color: green;
-	overflow:hidden;
 	z-index: 2;
+	overflow: hidden;
 }
 
 .photo {
 	position: absolute;
 	width:100vw;
 	max-width: 100%;
-	min-width: 900px;
-	height:100vh;
-	max-height: 100%;
+	min-width: 1120px;
+	height: 100vh;
+	min-height: 630px;
 	display:none;
 	overflow: hidden;
 }
@@ -102,7 +111,7 @@ body {
 #cycle-pager {
 	position: absolute;
 	width:100%;
-	min-width: 900px;
+	min-width: 1120px;
 	bottom:120px;
 	text-align: center;
 	z-index: 2;
@@ -124,31 +133,35 @@ body {
 }
 
 #about {
-	display:none;
 	position: absolute;
 	width:100vw;
 	max-width: 100%;
-	min-width: 900px;
+	min-width: 1120px;
 	height:100vh;
 	max-height: 100%;
-	margin:0;
+	min-height: 630px;
+	top:-100%;
 	background-color: white;
 	z-index: 3;
 }
 
 #container {
 	position: absolute;
-	width: 1050px;
+	width: 1054px;
+	height:430px;
+	min-height: 430px;
 	top:50%;
 	left:50%;
 	transform: translateX(-50%) translateY(-50%);
 }
+
 #about-photo{
 	display:inline-block;
 	height: 400px;
 	width:300px;
 	float: left;
 	overflow:hidden;
+	border:1px solid black;
 }
 
 #about-photo img{
@@ -158,8 +171,9 @@ body {
 #about-word{
 	display: inline-block;
 	height:500px;
-	width: 700px;
+	width: 600px;
 	margin-left:50px;
+
 }
 
 #about p{
@@ -167,17 +181,24 @@ body {
 	font-size: 22px;
 	font-family: "raleway";
 }
-#sign{
-	width:700px;
+
+#escape-box {
+	height:100%;
+	width: 100%;
+	z-index: 3;
 }
+
+#sign{
+	width:600px;
+}
+
 #footer {
 	position: absolute;
 	width: 100vw;
 	max-width: 100%;
-	min-width: 900px;
+	min-width: 1120px;
 	height: 100px;
-	bottom:0px;
-	margin:0;
+	bottom:0;
 	z-index: 4;
 	background-color: rgba(255,255,255,0.9);
 }
