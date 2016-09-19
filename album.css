@@ -210,3 +210,10 @@ body {
 	font-size: 15px;
 }
 
+#debug {
+	display:none;
+	position: absolute;
+	z-index: 6;
+	font-size: 20px;
+}
+
