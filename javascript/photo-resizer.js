@@ -1,45 +1,40 @@
 $(document).ready(function(){
+	//Do resize first for resolution support.
 	resizer();
+	resizeEventChecker();
 });
-/*
+
 var resizeEventChecker = function(){
+	//Check every 0.3 sec.
 	var width = $(window).width();
 	var height = $(window).height();
 	setInterval( function(){
 		var nowWidth = $(window).width();
 		var nowHeight = $(window).height();
+		//If width or height of window change, call resizer.
 		if(( width != nowWidth ) || ( height != nowHeight )){
-			if(nowWidth >= 1120 && nowHeight >= 630){
-				var ratio = parseFloat(nowHeight/nowWidth);
-				if( ratio >= parseFloat(9/16) ){
-					console.log(parseFloat(ratio));
-					$('.photo img').css({'height':nowHeight});
-				}
-				else{
-					console.log("2");
-					$('.photo img').css({'width':nowWidth});
-				}
-			}
+			resizer();
 		}
-
+		//Record.
+		width = nowWidth;
+		height = nowHeight;
 	},300);
-}*/
+}
 var resizer = function(){
-	var width = $(window).width();
-	var height = $(window).height();
+	//Always change with body size(Not window size).
 	var bodyHeight = $(document.body).height();
 	var bodyWidth = $(document.body).width();
 	var albumDOM = $('body');
 	var ratio = parseFloat(bodyHeight/bodyWidth);
-
-		if( ratio >= parseFloat(9/16) ){
-			console.log(parseFloat(ratio));
-			$('.photo img').css({'height':bodyHeight});
-		}
-		else{
-			console.log("2");
-			$('.photo img').css({'width':bodyWidth});
-		}
-	console.log(width + ' ' + height + ' ' + bodyHeight + ' ' + bodyWidth);
-	console.log();
+	//If the ratio of body if above 16:9 (say, 21:9 or higher), take width. otherwise take height.
+	if( ratio >= parseFloat(9/16) ){
+		//Keep the ratio of photos.
+		$('.photo img').css({'height':bodyHeight,'width':bodyHeight*(16/9)});
+		$(document)[0].getElementById('photoHeight').innerHTML = bodyHeight;
+	}
+	else{
+		//Keep the ratio of photos.
+		$('.photo img').css({'height':bodyWidth*(9/16),'width':bodyWidth});
+		$(document)[0].getElementById('photoWidth').innerHTML = bodyWidth ;
+	}
 }
